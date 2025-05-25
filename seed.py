@@ -10,13 +10,13 @@ Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-# 🔥 Clear existing data
+#  Clear existing data
 session.query(Freebie).delete()
 session.query(Dev).delete()
 session.query(Company).delete()
 session.commit()
 
-# ✅ Seed fresh data
+#  Seed fresh data
 dev1 = Dev(name="Alice")
 dev2 = Dev(name="Bob")
 dev3 = Dev(name="Gloria")
@@ -29,7 +29,6 @@ company3 = Company(name="Kibabi", founding_year=2000)
 company4 = Company(name="Zetech", founding_year=1990)
 company5 = Company(name="Moringa", founding_year=2008)
 
-# Fix: devs and companies were not fully added
 session.add_all([dev1, dev2, dev3, dev4, dev5,
                  company1, company2, company3, company4, company5])
 session.commit()
