@@ -35,6 +35,9 @@ session.commit()
 
 
 # Add more freebies
+freebie1 = company1.give_freebie(dev1, "Sticker", 5, session)
+freebie2 = company1.give_freebie(dev2, "T-shirt", 20, session)
+freebie3 = company2.give_freebie(dev1, "Mug", 15, session)
 freebie4 = company3.give_freebie(dev3, "Water Bottle", 10, session)
 freebie5 = company4.give_freebie(dev4, "Laptop Sticker", 7, session)
 freebie6 = company5.give_freebie(dev5, "Notebook", 12, session)
