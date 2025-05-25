@@ -5,7 +5,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from lib.models import Base, Dev, Company, Freebie
+from models import Base, Dev, Company, Freebie
 
 import ipdb  
 
